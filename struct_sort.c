@@ -75,7 +75,7 @@ void merge(E *e, int start, int mid, int end, int option)
         }
         else if (option == 2)
         {
-            if (strcmpi(e1[i].name, e2[j].name) < 0)
+            if (strcmp(e1[i].name, e2[j].name) < 0)
             {
                 e[k] = e1[i];
                 i++;
@@ -133,9 +133,28 @@ void sort_eid(E *e, int start, int end, int option)
     
 }
 
-
-
-
+void bubble_sort_eid(E *e, int n)
+{
+    int noswap = 0;
+    for (int i = 0; i < n - 1; i++)
+    {
+        noswap = 0;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (e[j].eid > e[j + 1].eid)
+            {
+                E temp = e[j];
+                e[j] = e[j + 1];
+                e[j + 1] = temp;
+                noswap = 1;
+            }
+        }
+        if (noswap == 0)
+        {
+            break;
+        }
+    }
+}
 
 
 int main()
@@ -145,16 +164,20 @@ int main()
     accept(e, n);
     display(e, n);
 
-    while(option != 4)
+    while(option != 5)
     {
         printf("\nWhich Parameter do you wanna sort with?\n");
-        printf("1.Eid\n2.Name\n3.Salary4.Exit\n->");
-        if (option == 4)
-        {
-            return 0;
-        }
+        printf("1.Eid\n2.Name\n3.Salary\n4.BubbleSort\n5.Exit\n->");
         scanf("%d", &option);
-        sort_eid(e, 0, n - 1, option);
+        if (option == 5)
+        {
+            break;
+        }
+        else if (option == 4)
+            bubble_sort_eid(e, n);
+        else
+            sort_eid(e, 0, n - 1, option);
+
         display(e, n);
     }
     return 0;
