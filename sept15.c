@@ -29,9 +29,9 @@ int decimal_to_binary(int decimal){
 
 //3. Find Largest of three numbers
 
-int largest_of_three_2(int a, int b, int c){
+int largest_of_three_2(int a, int b, int c){     //function definition
 
-    if (a > b && a > c){
+    if (a > b && a > c){                                 //if-else-if ladder
         return a;
     }
     else if (b > c){      
