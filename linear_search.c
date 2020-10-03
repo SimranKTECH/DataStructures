@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int linear_search(int arr[], int n, int key){
+int linear_search(int arr[], int n, int key){        //function definition
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){               //for loop starts
         if (arr[i] == key){
             return i;
         }
@@ -12,19 +12,19 @@ int linear_search(int arr[], int n, int key){
 
 int main()
 {
-    int n, key, arr[20];
-    printf("Enter the size of the array  : ");
+    int n, key, arr[20];                                            //initialization of variables
+    printf("Enter the size of the array  : ");                      //user input for size of the array
     scanf("%d", &n);
 
-    printf("\nEnter the elements of the array : ");
+    printf("\nEnter the elements of the array : ");                 //user input of elements in the array
     for(int i = 0; i < n; i++) scanf("%d", &arr[i]);
 
-    printf("\n Enter the element you want to search  : ");
+    printf("\n Enter the element you want to search  : ");           //user input of specific number to be searched 
     scanf("%d", &key);
 
-    int result = linear_search(arr, n, key);
+    int result = linear_search(arr, n, key);                          //function call
 
-    if (result == 0){
+    if (result == 0){                                                 //if-else condition to finally print the searched element in the array
         printf("\n The key wasn't found!\n");
     }
     else
