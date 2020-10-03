@@ -66,15 +66,15 @@ int largest_of_three_1(int a, int b, int c){
 
 int** matrix_addition(int **a, int **b, int m, int n){ // Assuming that the dimension of both are same
 
-    int **ans = malloc(sizeof(int)*(m*n));
+    int **ans = malloc(sizeof(int)*(m*n));                  
 
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
-            ans[i][j] = a[i][j] + b[i][j];
-        }
+            ans[i][j] = a[i][j] + b[i][j];                 //adding elements of two matices
+       
     }
 
-    return ans;
+    return ans;                           //returning ans value
 }
 
 
