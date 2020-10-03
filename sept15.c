@@ -3,10 +3,10 @@
 
 //1. Linear Search
 
-int linear_search(int arr[], int n, int key){
+int linear_search(int arr[], int n, int key){       //function definition
 
-    for(int i = 0; i < n; i++){
-        if (arr[i] == key){
+    for(int i = 0; i < n; i++){                     //for loop starts
+        if (arr[i] == key){                         //if condition
             return i;
         }
     }
@@ -29,7 +29,7 @@ int decimal_to_binary(int decimal){
 
 //3. Find Largest of three numbers
 
-int largest_of_three_2(int a, int b, int c){
+int largest_of_three_2(int a, int b, int c){                     
 
     if (a > b && a > c){
         return a;
