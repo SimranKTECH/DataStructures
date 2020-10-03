@@ -80,15 +80,15 @@ int** matrix_addition(int **a, int **b, int m, int n){ // Assuming that the dime
 
 //5. Reverse a number
 
-int reverse_a_number(int x){
+int reverse_a_number(int x){     //function definition
     int ans = 0;
     
-    while(x != 0){
+    while(x != 0){                       //while loop starts until x is not equals to 0
         ans = ans*10 + (x % 10);
         x /= 10;
     }
 
-    return ans;
+    return ans;                                 //returning reversed number
 }
 
 int reversDigits(int num) 
